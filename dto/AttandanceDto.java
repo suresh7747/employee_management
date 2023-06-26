@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.ems.entitiy.AttandanceSource;
 import com.ems.entitiy.EntryType;
@@ -24,6 +25,8 @@ public class AttandanceDto {
 	private AttandanceSource attandanceSource;
 	private String approvedBy;
 	private int employee_id;
+	@Size(min = 2, message = "user name should have at least 2 characters")
+	private String name;
 	public Date getDate() {
 		return date;
 	}
@@ -65,6 +68,12 @@ public class AttandanceDto {
 	}
 	public void setEmployee_id(int employee_id) {
 		this.employee_id = employee_id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	

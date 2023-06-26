@@ -90,4 +90,5 @@ public class EmployeeDetailServiceImpl implements EmployeeDetailService {
 		employeeDetailsDto.setTechnologyName(employeeDetails.getTechnology().getTechnologyName());
 		return employeeDetailsDto;
 	}
+	
 }

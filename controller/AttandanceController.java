@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ems.dto.AttandanceDto;
-import com.ems.dto.EmployeeDto;
-import com.ems.entitiy.Attandance;
-import com.ems.repository.AttandanceRepo;
+
 import com.ems.service.AttandanceService;
 
 @RestController
@@ -23,6 +21,7 @@ public class AttandanceController {
 		
         return new ResponseEntity<>(attandanceService.createAttandance(attendanceDto), HttpStatus.CREATED);
     }
+	
 	
 
 }
